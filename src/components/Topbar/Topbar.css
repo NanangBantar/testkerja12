@@ -1,0 +1,57 @@
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+  padding: 20px 100px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.topbar-paragraph {
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 4px;
+}
+
+.scrolled {
+  background-color: white;
+  transition: 0.2s;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+@media screen and (max-width: 767px) {
+  .logo-text {
+    font-size: 18px;
+  }
+  .logo-image {
+    width: 30px;
+    margin-right: 10px;
+  }
+  .topbar {
+    padding: 20px;
+  }
+  .topbar-paragraph {
+    font-size: 15px;
+    padding-top: 2px;
+  }
+}

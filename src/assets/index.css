@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: #8984a1;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  background-image: url("Rectangle 5.png");
+  background-repeat: no-repeat;
+}
+
+.text-primary {
+  color: #3e2e83;
+}
+
+.text-secondary {
+  color: #11468f;
+}
+
+.reversed-column {
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .App {
+    background-image: url("Rectangle 5.png");
+  }
+  .reversed-column {
+    flex-direction: column-reverse;
+  }
+}

@@ -1,0 +1,25 @@
+.card-container {
+  background-color: white;
+  width: 362px;
+  height: 460px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+@media screen and (max-width: 767px) {
+  .card-image {
+    height: 310px;
+    width: 310px;
+  }
+  .card-container {
+    margin: auto;
+    width: 330px;
+    height: 420px;
+  }
+}

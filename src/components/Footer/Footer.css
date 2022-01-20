@@ -1,0 +1,10 @@
+.footer-text {
+  margin: 40px 0 40px 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-text {
+    margin: 38px 0 200px 0;
+  }
+}

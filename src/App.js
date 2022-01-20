@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import { Switch, Route } from "react-router-dom";
+import "./assets/index.css";
+
+import Topbar from "./components/Topbar";
+import Footer from "./components/Footer";
+import About from "./containers/About";
+import Visi from "./containers/Visi";
+import Contact from "./containers/Contact";
 
 function App() {
+  const [scrollPosition, setScrollPosition] = React.useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Topbar scrollPosition={scrollPosition} />
+      <Switch>
+        <Route path="/" component={About} exact />
+        <Route path="/contact" component={Contact} exact />
+        <Route path="/visi" component={Visi} exact />
+      </Switch>
+      <Footer />
     </div>
   );
 }
